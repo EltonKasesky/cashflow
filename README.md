@@ -24,3 +24,22 @@ permitindo o uso de consultas SQL.
 - **Geração de Relatórios**: Capacidade de exportar relatórios detalhados para **PDF e Excel**, oferecendo uma análise visual e eficaz das despesas.  
 
 - **RESTful API com Documentação Scalar**: Interface documentada que facilita a integração e o teste por parte dos desenvolvedores.
+
+## Getting Started
+
+Para obter uma cópia local funcionando, siga estes passos.
+
+### Requisitos
+
+- IDE ou Editor de Código
+- Windows 10+ ou Linux/MacOS com [.NET SDK](https://dotnet.microsoft.com/en-us/download) Instalado
+- PostgreSQL
+
+### Instalação
+
+1. Clone o repositório:
+   ```sh
+   git clone https://github.com/EltonKasesky/cashflow.git
+   ```
+3. Preencha as informações no arquivo `appsettings.Development.json`.
+4. Execute a API e aproveite o teste :)
