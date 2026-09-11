@@ -14,3 +14,13 @@ Dentre os pacotes NuGet utilizados, o **AutoMapper** é o responsável pelo mape
 para testes de unidade para tornar as verificações mais legíveis, ajudando a escrever testes claros e compreensíveis. Para as validações, o **FluentValidation** é usado para implementar regras de validações de forma 
 simples e intuitiva nas classes de requisições, mantendo o código limpo e fácil de manter. Por fim, o **EntityFramework** atua como um ORM (Object-Relational Mapper) que simplifica as interações com o banco de dados, 
 permitindo o uso de consultas SQL.
+
+### Features
+
+- **Domain-Driven Design (DDD)**: Estrutura modular que facilita o entendimento e a manutenção do domínio da aplicação.
+
+- **Testes de Unidade**: Testes abrangentes com FluentAssertions para garantir a funcionalidade e a qualidade.
+
+- **Geração de Relatórios**: Capacidade de exportar relatórios detalhados para **PDF e Excel**, oferecendo uma análise visual e eficaz das despesas.  
+
+- **RESTful API com Documentação Scalar**: Interface documentada que facilita a integração e o teste por parte dos desenvolvedores.
