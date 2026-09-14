@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using CashFlow.Communication.Expense.Requests;
 using CashFlow.Communication.Expense.Responses;
+using CashFlow.Communication.Users.Requests;
+using CashFlow.Communication.Users.Responses;
 using CashFlow.Domain.Entities;
 
 namespace CashFlow.Application.AutoMapper;
@@ -17,6 +19,8 @@ public class AutoMapping : Profile
     {
         CreateMap<RequestExpense, Expense>()
             .ForMember(destine => destine.Date, source => source.MapFrom(expense => expense.Date.ToUniversalTime()));
+        CreateMap<RequestRegisterUser, User>()
+            .ForMember(destine => destine.Password, source => source.Ignore());
     }
     
     private void EntityToResponse()

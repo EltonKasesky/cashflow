@@ -135,4 +135,25 @@
   <data name="EXPENSE_NOT_FOUND" xml:space="preserve">
     <value>The expense cannot be found.</value>
   </data>
+  <data name="NAME_EMPTY" xml:space="preserve">
+    <value>The name is required.</value>
+  </data>
+  <data name="EMAIL_REQUIRED" xml:space="preserve">
+    <value>The email is required.</value>
+  </data>
+  <data name="EMAIL_INVALID" xml:space="preserve">
+    <value>The email is not valid.</value>
+  </data>
+  <data name="PASSWORD_INVALID" xml:space="preserve">
+    <value>The password must be have one number, one case up letter, one case down letter and one special character (?, !, /, *).</value>
+  </data>
+  <data name="EMAIL_ALREADY_REGISTERED" xml:space="preserve">
+    <value>The email is already registered</value>
+  </data>
+  <data name="PASSWORD_REQUIRED" xml:space="preserve">
+    <value>The password is required.</value>
+  </data>
+  <data name="PASSWORD_MUST_BE_GREATER_THAN_EIGHT" xml:space="preserve">
+    <value>The password must be greater than eight characters.</value>
+  </data>
 </root>
