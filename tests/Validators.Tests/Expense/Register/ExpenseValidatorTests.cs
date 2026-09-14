@@ -8,13 +8,13 @@ using FluentValidation.Results;
 
 namespace Validators.Tests.Expense.Register;
 
-public class RegisterExpenseValidatorTests
+public class ExpenseValidatorTests
 {
     [Fact]
     public void Success()
     {
         ExpenseValidator validator = new ExpenseValidator();
-        RequestExpense request = RequestRegisterExpenseBuilder.Build();
+        RequestExpense request = RequestExpenseBuilder.Build();
 
         ValidationResult result = validator.Validate(request);
 
@@ -28,7 +28,7 @@ public class RegisterExpenseValidatorTests
     public void Error_Title_Empty(string title)
     {
         ExpenseValidator validator = new ExpenseValidator();
-        RequestExpense request = RequestRegisterExpenseBuilder.Build();
+        RequestExpense request = RequestExpenseBuilder.Build();
 
         request.Title = title;
 
@@ -45,7 +45,7 @@ public class RegisterExpenseValidatorTests
     public void Error_Amount_Invalid(decimal amount)
     {
         ExpenseValidator validator = new ExpenseValidator();
-        RequestExpense request = RequestRegisterExpenseBuilder.Build();
+        RequestExpense request = RequestExpenseBuilder.Build();
 
         request.Amount = amount;
 
@@ -60,7 +60,7 @@ public class RegisterExpenseValidatorTests
     public void Error_Date_In_Future()
     {
         ExpenseValidator validator = new ExpenseValidator();
-        RequestExpense request = RequestRegisterExpenseBuilder.Build();
+        RequestExpense request = RequestExpenseBuilder.Build();
 
         request.Date = DateTime.UtcNow.AddDays(+1);
 
@@ -75,7 +75,7 @@ public class RegisterExpenseValidatorTests
     public void Error_Payment_Type_Invalid()
     {
         ExpenseValidator validator = new ExpenseValidator();
-        RequestExpense request = RequestRegisterExpenseBuilder.Build();
+        RequestExpense request = RequestExpenseBuilder.Build();
 
         request.PaymentType = (EPaymentType)1000;
 

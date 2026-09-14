@@ -7,6 +7,7 @@ using CashFlow.Application.UseCases.Expenses.Register;
 using CashFlow.Application.UseCases.Expenses.Report.Excel;
 using CashFlow.Application.UseCases.Expenses.Report.Pdf;
 using CashFlow.Application.UseCases.Expenses.Update;
+using CashFlow.Application.UseCases.Users.Register;
 using Microsoft.Extensions.DependencyInjection;
 using PdfSharp.Fonts;
 
@@ -16,12 +17,13 @@ public static class DependencyInjectionExtension
 {
     public static void AddApplication(this IServiceCollection services)
     {
-        AddUseCases(services);
+        AddExpensesUseCases(services);
+        AddUsersUseCases(services);
         AddAutoMapper(services);
         AddFontResolver();
     }
 
-    private static void AddUseCases(IServiceCollection services)
+    private static void AddExpensesUseCases(IServiceCollection services)
     {
         services.AddScoped<IGetAllExpensesUseCase, GetAllExpensesUseCase>();
         services.AddScoped<IGetExpenseByIdUseCase, GetExpenseByIdUseCase>();
@@ -30,6 +32,11 @@ public static class DependencyInjectionExtension
         services.AddScoped<IDeleteExpenseUseCase, DeleteExpenseUseCase>();
         services.AddScoped<IGenerateExpensesExcelReportUseCase, GenerateExpensesExcelReportUseCase>();
         services.AddScoped<IGenerateExpensesPdfReportUseCase, GenerateExpensesPdfReportUseCase>();
+    }
+
+    private static void AddUsersUseCases(IServiceCollection services)
+    {
+        services.AddScoped<IRegisterUserUseCase, RegisterUserUseCase>();
     }
 
     private static void AddAutoMapper(IServiceCollection services)

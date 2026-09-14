@@ -135,4 +135,25 @@
   <data name="EXPENSE_NOT_FOUND" xml:space="preserve">
     <value>La dépense ne peut pas être trouvée.</value>
   </data>
+  <data name="NAME_EMPTY" xml:space="preserve">
+    <value>Le nom est obligatoire.</value>
+  </data>
+  <data name="EMAIL_REQUIRED" xml:space="preserve">
+    <value>L'email est obligatoire.</value>
+  </data>
+  <data name="EMAIL_INVALID" xml:space="preserve">
+    <value>L'email n'est pas valide.</value>
+  </data>
+  <data name="PASSWORD_INVALID" xml:space="preserve">
+    <value>Le mot de passe doit contenir un chiffre, une lettre majuscule, une lettre minuscule et un caractère spécial (?, !, /, *).</value>
+  </data>
+  <data name="EMAIL_ALREADY_REGISTERED" xml:space="preserve">
+    <value>L'email est déjà enregistré</value>
+  </data>
+  <data name="PASSWORD_REQUIRED" xml:space="preserve">
+    <value>Le mot de passe est requis.</value>
+  </data>
+  <data name="PASSWORD_MUST_BE_GREATER_THAN_EIGHT" xml:space="preserve">
+    <value>Le mot de passe doit contenir plus de huit caractères.</value>
+  </data>
 </root>
