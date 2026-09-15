@@ -156,4 +156,7 @@
   <data name="PASSWORD_MUST_BE_GREATER_THAN_EIGHT" xml:space="preserve">
     <value>A senha deve ter mais de oito caracteres.</value>
   </data>
+  <data name="LOGIN_INVALID" xml:space="preserve">
+    <value>Email ou senha não válidos.</value>
+  </data>
 </root>
