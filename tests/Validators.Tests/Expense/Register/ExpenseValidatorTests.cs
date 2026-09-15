@@ -42,6 +42,7 @@ public class ExpenseValidatorTests
     [Theory]
     [InlineData(0)]
     [InlineData(-1)]
+    [InlineData(-10)]
     public void Error_Amount_Invalid(decimal amount)
     {
         ExpenseValidator validator = new ExpenseValidator();

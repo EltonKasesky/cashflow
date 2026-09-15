@@ -7,6 +7,7 @@ using CashFlow.Application.UseCases.Expenses.Register;
 using CashFlow.Application.UseCases.Expenses.Report.Excel;
 using CashFlow.Application.UseCases.Expenses.Report.Pdf;
 using CashFlow.Application.UseCases.Expenses.Update;
+using CashFlow.Application.UseCases.Login;
 using CashFlow.Application.UseCases.Users.Register;
 using Microsoft.Extensions.DependencyInjection;
 using PdfSharp.Fonts;
@@ -19,6 +20,7 @@ public static class DependencyInjectionExtension
     {
         AddExpensesUseCases(services);
         AddUsersUseCases(services);
+        AddLoginUseCases(services);
         AddAutoMapper(services);
         AddFontResolver();
     }
@@ -37,6 +39,11 @@ public static class DependencyInjectionExtension
     private static void AddUsersUseCases(IServiceCollection services)
     {
         services.AddScoped<IRegisterUserUseCase, RegisterUserUseCase>();
+    }
+
+    private static void AddLoginUseCases(IServiceCollection services)
+    {
+        services.AddScoped<IDoLoginUseCase, DoLoginUseCase>();
     }
 
     private static void AddAutoMapper(IServiceCollection services)
